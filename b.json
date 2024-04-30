@@ -1,0 +1,1 @@
+"{"companyId":"toyota","pageId":"contact","isLearned":true,"scripts":[{"name":"name","isAlways":false,"alwaysValue":"","type":"input_group","value":{"type":"radio_group","conditions":{"radio28":{"cssSelector":"#radio28_6","type":"radio"}}},"formatter":{"HADataKeys":["sex"],"formatInformation":{}}}]}"

@@ -1,0 +1,49 @@
+{
+  "metadata": {
+    "company": "アクサダイレクト",
+    "page_id_type": "url | iframe_id",
+    "is_learned": true
+  }, // metadata は事前に我々の方で必ず用意しておく
+  "scripts": [
+    {
+      "page_id": "xxxx", // URL か iframe id
+      "is_learned": true,
+      "scripts": [
+        {
+          "label": "full_name",
+          "is_conditional": false,
+          "type": "text",
+          "css_selector": "#contact > div > form > dl > dd:nth-child(2) > input[type=text]"
+        },
+        {
+          "label": "prefecture",
+          "is_conditional": false,
+          "type": "select",
+          "css_selector": "#pref1"
+        },
+        {
+          "label": "job",
+          "is_conditional": false,
+          "type": "radio",
+          "css_selector": "#contact > div > form > dl > dd:nth-child(26)"
+        },
+        {
+          "label": "job_type",
+          "is_conditional": true,
+          "type": "checkbox",
+          "css_selector": "#contact > div > form > dl > dd:nth-child(28)",
+          "child": {
+            "label": "job_type_detail",
+            "is_conditional": false,
+            "type": "text",
+            "css_selector": "#contact > div > form > dl > dd:nth-child(30) > input[type=text]"
+          }
+        }
+      ]
+    },
+    {
+      "page_id": "yyyy",
+      "is_learned": false
+    }
+  ] // metadata.is_learned が false の際は空配列
+}
